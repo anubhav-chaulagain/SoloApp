@@ -11,6 +11,7 @@ import com.example.soloapp.databinding.ActivityLoginBinding
 import com.example.soloapp.utils.LoadingUtil
 import com.example.soloapp.viewmodel.UserViewModel
 import com.example.soloapp.repository.UserRepositoryImpl
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
@@ -30,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
 
         loadingUtil = LoadingUtil(this)
 
-        val userRepository = UserRepositoryImpl()
+        val userRepository = UserRepositoryImpl(FirebaseAuth.getInstance())
         userViewModel = UserViewModel(userRepository)
 
         binding.btnLogin.setOnClickListener {

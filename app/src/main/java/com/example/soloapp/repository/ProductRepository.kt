@@ -1,5 +1,7 @@
 package com.example.soloapp.repository
 
+import android.content.Context
+import android.net.Uri
 import com.example.soloapp.model.ProductModel
 
 interface ProductRepository {
@@ -14,4 +16,8 @@ interface ProductRepository {
     fun getProductById(productId: String, callback: (ProductModel?, Boolean, String) -> Unit)
 
     fun getAllProduct(callback: (List<ProductModel>?, Boolean, String) -> Unit)
+
+    fun uploadImg(context: Context, imageUri: Uri, callback: (String?) -> Unit)
+
+    fun getFileNameFromUri(context: Context, uri: Uri) : String?
 }

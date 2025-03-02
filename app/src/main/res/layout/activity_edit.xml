@@ -4,16 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
+    android:paddingTop="50dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/baseline_account_circle_24"
-        />
+    tools:context=".EditActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -21,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
-        android:text="Signup"
+        android:text="Update Profile"
         android:textSize="40sp"
         android:textStyle="bold" />
 
@@ -51,26 +45,8 @@
             android:hint="email" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="20dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="password" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <Spinner
-        android:id="@+id/genderSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="20dp"
-        android:padding="13dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -91,46 +67,15 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="20dp"
+
         android:backgroundTint="@color/black"
         android:fontFamily="sans-serif-medium"
         android:padding="10dp"
-        android:text="Signup"
+        android:text="Update"
         android:textSize="20sp"
         android:textStyle="bold"
         app:cornerRadius="8dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="25dp">
 
-        <!-- Left Line -->
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="@android:color/darker_gray"/>
-
-        <!-- Center Text -->
-        <TextView
-            android:id="@+id/alreadyHaveAccText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Already have an account?"
-            android:fontFamily="monospace"
-            android:textSize="16sp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"/>
-
-        <!-- Right Line -->
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="@android:color/darker_gray"/>
-    </LinearLayout>
 
 </LinearLayout>

@@ -1,5 +1,7 @@
 package com.example.soloapp.viewmodel
 
+import android.content.Context
+import android.net.Uri
 import androidx.lifecycle.MutableLiveData
 import com.example.soloapp.model.ProductModel
 import com.example.soloapp.repository.ProductRepository
@@ -57,5 +59,9 @@ class ProductViewModel (val repository: ProductRepository) {
                 _loadingState.value = false
             }
         }
+    }
+
+    fun uploadImage(context: Context, imageUri: Uri, callback: (String?) -> Unit){
+        repository.uploadImg(context, imageUri, callback)
     }
 }

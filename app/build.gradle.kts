@@ -49,7 +49,13 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.cloudinary:cloudinary-android:2.1.0")
+    implementation("com.squareup.picasso:picasso:2.8")
 }

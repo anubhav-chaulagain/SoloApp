@@ -10,7 +10,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlin.toString
 
-class UserRepositoryImpl: UserRepository {
+class UserRepositoryImpl(instance: FirebaseAuth) : UserRepository {
 
     var auth: FirebaseAuth = FirebaseAuth.getInstance()
 

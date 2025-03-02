@@ -15,6 +15,7 @@ import com.example.soloapp.model.UserModel
 import com.example.soloapp.repository.UserRepositoryImpl
 import com.example.soloapp.viewmodel.UserViewModel
 import com.example.soloapp.utils.LoadingUtil
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     lateinit var binding: ActivityMainBinding
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
         loadingUtil = LoadingUtil(this)
 
-        val userRepository = UserRepositoryImpl()
+        val userRepository = UserRepositoryImpl(FirebaseAuth.getInstance())
         userViewModel = UserViewModel(userRepository)
 
         binding.btnRegister.setOnClickListener {
